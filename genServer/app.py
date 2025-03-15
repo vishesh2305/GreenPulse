@@ -10,8 +10,7 @@ from datetime import datetime
 import base64
 
 app = Flask(__name__)
-CORS(app)
-
+CORS(app, origins=[os.getenv("CLIENT_URL")] ,supports_credentials=True)
 # Gemini API configuration
 GENI_API_KEY = "AIzaSyB6FnJr5QNhtfE972ydklzCx_Rv9P4PChU"
 genai.configure(api_key=GENI_API_KEY)
