@@ -107,7 +107,7 @@ export function SidebarWithCta() {
   }, [isSidebarOpen]);
 
   return (
-    <div className="relative  w-3/6">
+    <div className="relative  w-6/12">
 
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}

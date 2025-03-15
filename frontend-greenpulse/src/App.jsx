@@ -8,13 +8,14 @@ import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import BlogList from "./pages/Blog/BlogList";
-
+import LandingPage from "./pages/Landing/LandingPage";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/home" element={<Home />}></Route>

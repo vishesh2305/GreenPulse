@@ -9,7 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkbg : "#212121",
+        darkbg : "#3b3b3b",
+        logoGreen: "#566e31", 
+        card1bgcolor: "#fffdf2",
+        card2bgcolor : "#f8fcf5",
+        card3bgcolor : "#fcf8f2",
       },
       boxShadow: {
         greenshadow: "0px 0px 1px #566d2e",
