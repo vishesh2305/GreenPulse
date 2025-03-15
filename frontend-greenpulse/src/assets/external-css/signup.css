@@ -1,0 +1,9 @@
+::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+
+
+.signup-outer-container{
+    border: 1px dotted #02020200;
+}

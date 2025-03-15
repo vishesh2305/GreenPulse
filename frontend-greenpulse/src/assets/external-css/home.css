@@ -1,0 +1,9 @@
+
+body{
+    background-color: black;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+ html{
+    background-color: white;
+}

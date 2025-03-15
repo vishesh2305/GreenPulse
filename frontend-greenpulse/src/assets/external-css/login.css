@@ -1,0 +1,8 @@
+::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+
+.second-div-login{
+    border: 1px dotted white;
+}

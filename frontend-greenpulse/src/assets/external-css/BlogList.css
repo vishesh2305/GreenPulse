@@ -1,0 +1,5 @@
+body{
+    overflow-y: scroll;
+    height: max-content;
+    max-height: max-content;
+}
