@@ -32,7 +32,7 @@ console.log(user.password)
 passport.use(new GoogleStrategy({
     clientID:keys.googleClientId,
     clientSecret:keys.googleClientSecret,
-    callbackURL:keys.callbackURL||'/auth/google/callback'
+    callbackURL:`${keys.server_url}/auth/google/callback`
 },async (accessToken,refreshToken,profile,done)=>{
     console.log(profile)
     const user=await User.findOne({googleID:profile.id})
