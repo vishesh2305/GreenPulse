@@ -26,7 +26,7 @@ const SignUp = () => {
     };
   
     try {
-      const response = await axios.post(`${import.meta.env.VITE_SERVER}/api/sign-up`, userData,{ withCredentials: true });
+      window.location.href = `${import.meta.env.VITE_SERVER}/auth/google`;
       console.log("Response:", response.data);
       if(response.data.message==true){
       navigate("/otp-verification", { state: { email } });}
