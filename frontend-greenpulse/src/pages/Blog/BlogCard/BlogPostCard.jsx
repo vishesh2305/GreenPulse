@@ -5,10 +5,14 @@ import {
     Typography,
     Avatar,
   } from "@material-tailwind/react";
+
+  import {Link} from "react-router-dom";
    
-  import firstcardimg from "../../../assets/images/7.png"
-  export function BackgroundBlogCard() {
+export function BackgroundBlogCard(
+    {title, subtitle, cardImage, avatarImage, link}
+  ) {
     return (
+      <Link to={link}>
       <Card
         shadow={false}
         className="hover:cursor-pointer relative grid h-[30rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center m-5"
@@ -19,7 +23,7 @@ import {
           color="transparent"
           className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center"
           style={{
-            backgroundImage: `url(${firstcardimg})`,
+            backgroundImage: `url(${cardImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
         }}
@@ -32,19 +36,19 @@ import {
             color="white"
             className="mb-6 font-medium leading-[1.5]"
           >
-            How To Get the Best Growth Of Your Plants ?
+            {title}
           </Typography>
           <Typography variant="h5" className="mb-4 text-gray-400">
-            Green Pulse
+            {subtitle}
           </Typography>
           <Avatar
             size="xl"
             variant="circular"
-            alt="tania andrew"
-            className="border-2 border-white"
-            src={firstcardimg}
+            className="border-2 border-white p-2"
+            src={avatarImage}
           />
         </CardBody>
       </Card>
+      </Link>
     );
   }

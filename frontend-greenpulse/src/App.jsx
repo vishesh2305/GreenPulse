@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 axios.defaults.withCredentials = true;
 import LandingPage from "./pages/Landing/LandingPage";
 import OtpVerification from "./pages/OtpVerification";
+import ContentSection16 from "./pages/Blog/BlogContentPage/BlogContent";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blog-list" element={<BlogList />}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
+          <Route path="./blog-list/BlogContentPage/BlogContent" element={<ContentSection16 />} />
         </Routes>
       </Router>
       </AuthProvider>
