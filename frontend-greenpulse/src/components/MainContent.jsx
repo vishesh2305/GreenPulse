@@ -19,7 +19,7 @@ const handleSubmit = async (e, userQuery, imageToSend) => {
 
     try {
         const response = await axios.post(
-            "http://localhost:2000/analyze",
+            `${import.meta.env.VITE_GEN_SERVER}/analyze`,
             {
                 user_id: "default_user",
                 prompt: userQuery,
