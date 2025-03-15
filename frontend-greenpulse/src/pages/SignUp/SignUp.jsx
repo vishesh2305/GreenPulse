@@ -88,18 +88,6 @@ const SignUp = () => {
           {/* Email Input */}
           <div className="mb-4 dark:bg-black dark:text-white">
             <label htmlFor="email" className="block font-medium text-gray-900 mb-1 dark:bg-black dark:text-white">
-              Your Name
-            </label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Uncle John"
-              className="w-full border border-gray-300 rounded-md p-2 focus:ring-1 focus:ring-darkGray outline-none dark:bg-black dark:text-white"
-            />
-          </div>
-          <div className="mb-4 dark:bg-black dark:text-white">
-            <label htmlFor="email" className="block font-medium text-gray-900 mb-1 dark:bg-black dark:text-white">
               Your Email
             </label>
             <input

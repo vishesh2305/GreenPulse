@@ -12,6 +12,8 @@ import { AuthProvider } from "./assets/AuthContext";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
 axios.defaults.withCredentials = true;
+import LandingPage from "./pages/Landing/LandingPage";
+import OtpVerification from "./pages/OtpVerification";
 
 function App() {
   return (
@@ -19,8 +21,11 @@ function App() {
       <AuthProvider>
       <Router>
         <Routes>
+  
+          <Route path="/" element={<LandingPage />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/otp-verification" element={<OtpVerification/>}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blog-list" element={<BlogList />}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>

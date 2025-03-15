@@ -51,9 +51,9 @@ function Home() {
                 <div id="main" className="flex w-full h-full overflow-hidden bg-white dark:bg-black justify-around lg:justify-normal ">
 
                     {/* <SidebarWithCta blogCount={blogs.length} /> */}
-                    <div className="absolute 2/6"><SidebarWithCta /></div>
+                    <div className="absolute bg-black"><SidebarWithCta /></div>
 
-                    <div className="w-full mx-auto dark:bg-black bg-white"><MainContent /></div>
+                    <div className="w-full mx-auto dark:bg-black bg-white "><MainContent /></div>
 
 
 
