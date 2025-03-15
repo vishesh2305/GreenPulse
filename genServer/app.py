@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import os
 import google.generativeai as genai
 from PIL import Image
 from flask_cors import CORS
@@ -330,8 +331,6 @@ def analyze():
 @app.route("/")
 def home():
     return "<h1>Hello World</h1>"
-port = int(os.environ.get("PORT", 2000))  #
-
 
 if __name__ == "__main__":
-    app.run(port=port, debug=True)
+    app.run(port=2000, debug=True)
