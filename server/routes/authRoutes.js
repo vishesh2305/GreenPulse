@@ -38,8 +38,7 @@ module.exports=(app)=>{
     
       // If user doesn't exist, create new user with hashed password.
       try {
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ name, email, password: hashedPassword, verified: false });
+        const newUser = new User({ name, email, password: password, verified: false });
         await newUser.save();
     
         // Generate OTP and send it.

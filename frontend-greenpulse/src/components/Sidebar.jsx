@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/external-css/sidebar.css"
 import {
   Card,
@@ -26,6 +27,7 @@ import {
   ChevronRightIcon,
   ChevronDownIcon,
   CubeTransparentIcon,
+  ShoppingCartIcon
 } from "@heroicons/react/24/outline";
 
 
@@ -33,7 +35,7 @@ import {
 export function SidebarWithCta() {
   const [open, setOpen] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState(true);
-
+  const navigate = useNavigate();
   const [historySearches, setHistorySearches] = useState([]);
   const [blogCount, setBlogCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -49,6 +51,12 @@ if(result.data.message){console.log("got it");navigate("/login")}  }
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 
+  const handleBlogNavigation = () => {
+    navigate('/blog-list');
+  }
+  const handleMarketPlaceNavigation = () => {
+    navigate('/marketplace');
+  }
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -173,7 +181,7 @@ if(result.data.message){console.log("got it");navigate("/login")}  }
 
 
             <hr className="my-2 border-blue-gray-50 dark:bg-black dark:text-white" />
-            <ListItem>
+            <ListItem onClick={handleBlogNavigation}>
               <ListItemPrefix>
                 <NewspaperIcon className="h-5 w-5 dark:bg-black dark:text-white" />
               </ListItemPrefix>
@@ -187,6 +195,12 @@ if(result.data.message){console.log("got it");navigate("/login")}  }
                 <UserCircleIcon className="h-5 w-5 dark:bg-black dark:text-white" />
               </ListItemPrefix>
               Profile
+            </ListItem>
+            <ListItem onClick={handleMarketPlaceNavigation}>
+              <ListItemPrefix>
+                <ShoppingCartIcon className="h-5 w-5 dark:bg-black dark:text-white" />
+              </ListItemPrefix>
+              MarketPlace
             </ListItem>
             <ListItem>
               <ListItemPrefix>

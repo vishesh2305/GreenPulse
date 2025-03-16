@@ -1,0 +1,97 @@
+.add_photo_section img{
+    width: 400px;
+    height: 400px;
+}
+.add_photo_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.add_photo_container h2{
+    justify-self: center;
+}
+.add_photo_container form{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.final_buy{
+    display: flex;
+    gap: 10px;
+justify-content: center;
+}
+.add_photo_container h2{
+    font-size: 30px;
+}
+.add_photo_section{
+    margin: 40px 0 50px 0;
+}
+h2{
+    font-size: 40px;
+}
+.item_detail{
+    font-size: 20px;
+}
+h3{
+    font-size: 28px;
+    align-self: center;
+}
+.item_d2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+h4{
+justify-self: center;
+}
+input[type="file"]{
+    display: none;
+}
+.imageUpload,form p{align-self: center;}
+.imageUpload i{
+   font-size: 60px;
+   cursor: pointer;
+   padding: 140px;
+}
+.img_combine{
+    border: dotted 2px gray;
+    cursor: pointer;
+}
+form button{
+    background-color:rgb(96, 151, 132);
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+form button:hover{
+    transform: scale(1.04);
+    background-color:rgba(0, 123, 80, 0.829);
+
+    
+}
+
+.cart{
+background-color:rgba(96, 151, 132, 0.829);
+;
+}
+.uploadtxt{
+    text-align: center;
+}
+.price{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(110, 139, 139);
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+}
+@media(max-width:1050px) {
+    .add_photo_container{
+        flex-direction: column;
+align-items: center;
+    }
+    
+}

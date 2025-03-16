@@ -56,7 +56,7 @@ const MyNavbar = () => {
                 color="blue-gray"
                 className="p-1 font-medium"
             >
-                <a href="..../src/pages/Blog/BlogList.jsx" className="flex items-center">
+                <a href="" className="flex items-center">
                     Blogs
                 </a>
             </Typography>

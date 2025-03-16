@@ -1,0 +1,101 @@
+#logo{
+    width: 8%;
+}
+.navbar{
+    padding: 20px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    color: rgb(45, 45, 56);
+}
+.navbar-right{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: rgb(45, 45, 56);
+    cursor: pointer;
+    border: 1px rgb(31, 34, 93) solid;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    
+}
+.navbar button:hover{
+    background-color: rgb(210, 212, 213);
+}
+.navbar-right>img{
+    width: 32px;
+}
+.navbar .active{
+    position: relative;
+    padding-bottom: 2px;
+}
+.navbar .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: rgb(93, 95, 134);
+    border-radius: 10px;
+}
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    bottom: 28px;
+    left: 36px;
+}
+@media(max-width:1050px) {
+    .navbar-right>img{
+        width: 27px;
+    }
+    #logo{width: 12%;}
+    .navbar-menu{
+        font-size: 17px;
+    }
+    .navbar button{
+        padding: 8px 25px;
+    }
+}
+@media(max-width:900px) {
+    .navbar-right{gap: 20px;}
+    .navbar-right button{
+        font-size: 20px;
+    }
+    
+}
+@media(max-width:750px){
+    .navbar-menu{display: none;}
+    #logo{width: 25%;}
+    .navbar-right img{width: 50px;}
+    .navbar-search-icon img{width: 80px;}
+    .navbar-search-icon .dot{
+        bottom: 42px;
+        left: 56px;
+    }
+    .navbar-right button{
+        font-size: 22px;
+        padding: 10px 30px;
+    }
+}

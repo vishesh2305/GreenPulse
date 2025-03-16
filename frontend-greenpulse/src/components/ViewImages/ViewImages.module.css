@@ -1,0 +1,28 @@
+/* ViewImages.module.css */
+.view_of_images {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next row if needed */
+    gap: 10px; /* Add spacing between images */
+    justify-content: center; /* Center-align the images */
+    padding: 20px; /* Add padding to the container */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border: 1px solid #ddd; /* Optional: add a border around the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    overflow: hidden; /* Prevent images from overflowing */
+  }
+  
+  .view_of_images img {
+    width: 200px; /* Set a fixed width for images */
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and crop overflow */
+    border-radius: 8px; /* Rounded corners for images */
+    border: 2px solid #ccc; /* Optional: add a border around images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+  }
+  
+  .view_of_images img:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
