@@ -37,7 +37,11 @@ export function SidebarWithCta() {
   const [historySearches, setHistorySearches] = useState([]);
   const [blogCount, setBlogCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+const handleLogout =  async() => {
 
+    const result=await axios.get(`${import.meta.env.VITE_SERVER}/api/logout`)
+    console.log(result.data.message)
+if(result.data.message){console.log("got it");navigate("/login")}  }
 
 
   const [isDarkMode, setIsDarkMode] = useState(
@@ -190,10 +194,11 @@ export function SidebarWithCta() {
               </ListItemPrefix>
               Settings
             </ListItem>
-            <ListItem>
+            <ListItem onClick={handleLogout}>
               <ListItemPrefix>
                 <PowerIcon className="h-5 w-5 dark:bg-black dark:text-white" />
               </ListItemPrefix>
+
               Log Out
             </ListItem>
           </List>

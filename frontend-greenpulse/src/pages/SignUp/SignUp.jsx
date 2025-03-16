@@ -18,8 +18,7 @@ const SignUp = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-  
+    e.preventDefault()
     const userData = {
       name: document.getElementById("name").value,
       email,
@@ -27,13 +26,14 @@ const SignUp = () => {
     };
   
     try {
-      const response = await axios.post("http://localhost:5000/api/sign-up", userData,{ withCredentials: true });
+      window.location.href = `${import.meta.env.VITE_SERVER}/auth/google`;
       console.log("Response:", response.data);
       if(response.data.message==true){
       navigate("/otp-verification", { state: { email } });}
       else{alert(response.data.message)}
     } catch (error) {
       console.error("Error signing up:", error.response?.data || error.message);
+    
     }
   };
 
@@ -88,18 +88,6 @@ const SignUp = () => {
           {/* Email Input */}
           <div className="mb-4 dark:bg-black dark:text-white">
             <label htmlFor="email" className="block font-medium text-gray-900 mb-1 dark:bg-black dark:text-white">
-              Your Name
-            </label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Uncle John"
-              className="w-full border border-gray-300 rounded-md p-2 focus:ring-1 focus:ring-darkGray outline-none dark:bg-black dark:text-white"
-            />
-          </div>
-          <div className="mb-4 dark:bg-black dark:text-white">
-            <label htmlFor="email" className="block font-medium text-gray-900 mb-1 dark:bg-black dark:text-white">
               Your Email
             </label>
             <input
@@ -147,7 +135,7 @@ const SignUp = () => {
 
           {/* Google Sign In Button */}
           <button className="mt-4 flex h-12 items-center justify-center gap-2 border border-darkGray px-4 py-2 rounded-lg w-full font-semibold dark:hover:bg-white dark:hover:text-black transition duration-100 ease-linear"
-            onClick={() => window.location.href ="/auth/google"}>
+            onClick={() => window.location.href =`${import.meta.env.VITE_SERVER}/auth/google`} type='buttony'>
             <img src="https://www.material-tailwind.com/logos/logo-google.png" className="h-6 w-6" alt="Google logo" />
             SignUp with Google
           </button>

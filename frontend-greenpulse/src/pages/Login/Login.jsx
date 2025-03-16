@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import axios from "axios";
 
 import "../../assets/external-css/login.css"
 
@@ -19,10 +20,24 @@ const Login = () => {
             navigate('/signup');
         }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+  
+    const userData = {
+      email:document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    };
+    console.log(userData)
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_SERVER}/api/login`, userData,{ withCredentials: true });
+      console.log("Response:", response.data);
+      if(response.data.message==true){
+      navigate("/home")}
+      else{alert(response.data.message)}
+    } catch (error) {
+      console.error("Error signing up:", error.response?.data || error);
+    }
 
-    navigate("/home");
   };
 
 
@@ -110,7 +125,7 @@ const Login = () => {
           </div>
 
           {/* Google Sign In Button */}
-          <button className="mt-4 flex h-12 items-center justify-center gap-2 border border-darkGray px-4 py-2 rounded-lg w-full font-semibold dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white transition duration-200 ease-linear">
+          <button className="mt-4 flex h-12 items-center justify-center gap-2 border border-darkGray px-4 py-2 rounded-lg w-full font-semibold dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white transition duration-200 ease-linear" onClick={() => window.location.href =`${import.meta.env.VITE_SERVER}/auth/google`}>
             <img src="https://www.material-tailwind.com/logos/logo-google.png" className="h-6 w-6" alt="Google logo" />
             Sign in with Google
           </button>
