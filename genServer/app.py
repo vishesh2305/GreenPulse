@@ -139,57 +139,47 @@ def analyze():
                 " \nAdd an conclusion header at the end in bold with the subtext containing the summary of your whole solution under 100 words with key action to take asap to save the crop / plant." +
                 f" \ntranslate back only your answer from english to {language}" +
                 " \nstriclty adhere to the given structure." + 
-                " \nThe solution should look visually colorful. And should always have mint background color. And should always have green thin rounded borders" +
+                " \nThe solution should look visually colorful." +
+                " \nshould always have transparent background color or rgb(54, 69, 79)." +
+                " \nshould have white  color text in front of transparent background." +
+                " \nAnd should always have white thin rounded borders" +
                 " \nUse good color combinations in the boxes. everything should be center aligned." +
                 " \nalways give padding to text." +
-                " \nuse gifs to be more visual" +
-                " \nuse hover animtations everywhere" +
-                " \nuse fade in text animations everytime" +
                 " \ndo not add ```html and ``` at opening or closing." +
                 " \ndo not add any links or images or videos in the solution." +
                 " \nHere is an example." + 
                 " \n<user>: {image of the plant} + English language {its own query.}" +
                 """ \n<assistant>: 
-                <!DOCTYPE html>
-<html>
-<head>
-    <title>Potato Blight Solution Guide</title>
-    <style>
-    / * {
-            transition: all 0.3s ease;
-        }
-    </style>
-</head>
-<body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background-color: #f0f8f0; color: #333; padding: 30px; max-width: 900px; margin: 0 auto;">
-    <div style="background-color: #e6ffe6; border-radius: 15px; padding: 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 30px;">
-            <p style="font-size: 22px; font-weight: 600; color: #2e8b57; background-color: #d1ffdd; padding: 12px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+<div style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background-color: rgba(0, 0, 0, 0); color: #ffffff; padding: 30px; max-width: 900px; margin: 0 auto;">
+    <div style="background-color: rgba(38, 48 ,55, 0.7); border-radius: 15px; padding: 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+        <div style="text-align: center; margin-bottom: 30px; background-color: rgba(0, 0, 0, 0);">
+            <p style="font-size: 22px; font-weight: 600; color: #ffffff; background-color: rgba(0, 0, 0, 0); padding: 12px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
                 <span style="font-weight: bold;">The leaf in the image has been identified as that of a potato plant.</span>
             </p>
             
-            <h1 style="font-size: 36px; color: #006400; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <h1 style="font-size: 36px; color: #white; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
                 Probable cause Identified: Early Potato blight or Fungal Outbreak
             </h1>
         </div>
         
         <div>
-            <h2 style="font-size: 32px; color: #2e8b57; text-align: center; margin: 40px 0 25px; padding-bottom: 10px; border-bottom: 3px solid #3cb371; transition: color 0.3s;" onmouseover="this.style.color='#1a663a'" onmouseout="this.style.color='#2e8b57'">
+            <h2 style="font-size: 32px; color: #ffffff; text-align: center; margin: 40px 0 25px; padding-bottom: 10px; border-bottom: 3px solid #3cb371;">
                 Solution to Cure Potato Blight
             </h2>
             
-            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; background-color: #dbf4e2; border-radius: 8px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ceebd8'" onmouseout="this.style.backgroundColor='#dbf4e2'">
+            <h3 style="font-size: 26px; color: #ffffff; margin: 30px 0 20px; padding: 10px 15px; background-color: rgba(0, 0, 0, 0); border-radius: 8px;">
                 Immediate Actions
             </h3>
             
             <ol style="font-size: 18px; padding-left: 25px; margin: 25px 0;">
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Remove Infected Foliage</span>: Cut all infected stems/leaves to ground level using clean tools. Burn the material or dispose of it in municipal green waste bins — do not compost it. If the infection is severe, cut all foliage (even if healthy-looking) to stop spores from reaching tubers.
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Remove Infected Foliage</span>: Cut all infected stems/leaves to ground level using clean tools. Burn the material or dispose of it in municipal green waste bins — do not compost it. If the infection is severe, cut all foliage (even if healthy-looking) to stop spores from reaching tubers.
                 </li>
                 
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Apply Fungicide</span>:
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Apply Fungicide</span>:
                     <ul style="margin-top: 10px; padding-left: 25px;">
-                        <li style="margin-bottom: 12px; padding: 8px; background-color: #e6f9ea; border-radius: 6px;">
+                        <li style="margin-bottom: 12px; padding: 8px; background-color: rgba(0, 0, 0, 0); border-radius: 6px;">
                             <span style="font-weight: bold; color: #2e8b57;">Chemical options</span>:
                             <ul style="margin-top: 8px; padding-left: 20px;">
                                 <li style="margin-bottom: 8px; padding: 6px;">Use <span style="font-weight: bold; color: #228b22;">mandipropamid</span> (e.g., Revus Top®) to kill spores on plant surfaces and block new infections.</li>
@@ -198,7 +188,7 @@ def analyze():
                             </ul>
                         </li>
                         
-                        <li style="margin-bottom: 12px; padding: 8px; background-color: #e6f9ea; border-radius: 6px;">
+                        <li style="margin-bottom: 12px; padding: 8px; background-color: rgba(0, 0, 0, 0); border-radius: 6px;">
                             <span style="font-weight: bold; color: #2e8b57;">Organic options</span>:
                             <ul style="margin-top: 8px; padding-left: 20px;">
                                 <li style="margin-bottom: 8px; padding: 6px;">Use <span style="font-weight: bold; color: #228b22;">copper hydroxide</span> or <span style="font-weight: bold; color: #228b22;">phosphorous acid sprays</span> (approved for organic use).</li>
@@ -207,36 +197,36 @@ def analyze():
                     </ul>
                 </li>
                 
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Dry the Foliage</span>: Avoid watering foliage. If irrigation is needed, water only at the base in the morning to let leaves dry quickly.
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px; " onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Dry the Foliage</span>: Avoid watering foliage. If irrigation is needed, water only at the base in the morning to let leaves dry quickly.
                 </li>
             </ol>
 
-            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; background-color: #dbf4e2; border-radius: 8px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ceebd8'" onmouseout="this.style.backgroundColor='#dbf4e2'">
+            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; background-color: rgba(0,0,0,0); border-radius: 8px; ">
                 Post-Infection Care
             </h3>
             
             <ol style="font-size: 18px; padding-left: 25px; margin: 25px 0;">
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Protect Tubers</span>: Leave tubers in the ground for <span style="font-weight: bold; color: #006400;">3 weeks</span> after cutting foliage. This allows spores on the soil surface to die and lets tuber skins harden. Do not harvest early—infected tubers may rot in storage.
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px; " onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Protect Tubers</span>: Leave tubers in the ground for <span style="font-weight: bold; color: #ffffff;">3 weeks</span> after cutting foliage. This allows spores on the soil surface to die and lets tuber skins harden. Do not harvest early—infected tubers may rot in storage.
                 </li>
                 
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Check Tubers</span>: After 3 weeks, dig up tubers carefully. Discard any with dark spots, rot, or soft areas. Use undamaged tubers ASAP—they won't store well.
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px; " onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Check Tubers</span>: After 3 weeks, dig up tubers carefully. Discard any with dark spots, rot, or soft areas. Use undamaged tubers ASAP—they won't store well.
                 </li>
             </ol>
 
-            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; background-color: #dbf4e2; border-radius: 8px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ceebd8'" onmouseout="this.style.backgroundColor='#dbf4e2'">
+            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; background-color: rgba(0, 0, 0, 0); border-radius: 8px;">
                 Prevent Future Outbreaks
             </h3>
             
             <ol style="font-size: 18px; padding-left: 25px; margin: 25px 0;">
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Use Resistant Varieties</span>: Plant blight-resistant types like <span style="font-weight: bold; color: #228b22;">Sarpo Mira</span> or <span style="font-weight: bold; color: #228b22;">Sarpo Axona</span> next season.
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Use Resistant Varieties</span>: Plant blight-resistant types like <span style="font-weight: bold; color: #228b22;">Sarpo Mira</span> or <span style="font-weight: bold; color: #228b22;">Sarpo Axona</span> next season.
                 </li>
                 
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Adjust Farming Practices</span>:
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Adjust Farming Practices</span>:
                     <ul style="margin-top: 10px; padding-left: 25px;">
                         <li style="margin-bottom: 8px; padding: 6px;">Space plants widely to improve airflow and reduce leaf wetness.</li>
                         <li style="margin-bottom: 8px; padding: 6px;">Rotate crops (3+ years) and avoid nightshade-family plants (e.g., tomatoes).</li>
@@ -244,8 +234,8 @@ def analyze():
                     </ul>
                 </li>
                 
-                <li style="margin-bottom: 18px; padding: 12px; background-color: #effff1; border-radius: 8px; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
-                    <span style="font-weight: bold; color: #006400; font-size: 20px;">Monitor & Spray Preventatively</span>:
+                <li style="margin-bottom: 18px; padding: 12px; background-color: rgb(54, 69, 79); border-radius: 8px;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <span style="font-weight: bold; color: #ffffff; font-size: 20px;">Monitor & Spray Preventatively</span>:
                     <ul style="margin-top: 10px; padding-left: 25px;">
                         <li style="margin-bottom: 8px; padding: 6px;">Scout fields weekly after plants reach 12 inches tall.</li>
                         <li style="margin-bottom: 8px; padding: 6px;">Apply fungicides like <span style="font-weight: bold; color: #228b22;">fluopyram</span> (Luna Tranquility®) or <span style="font-weight: bold; color: #228b22;">chlorothalonil</span> before infections start.</li>
@@ -253,52 +243,45 @@ def analyze():
                 </li>
             </ol>
 
-            <h3 style="font-size: 26px; color: #3cb371; margin: 30px 0 20px; padding: 10px 15px; text-align: center; background-color: #dbf4e2; border-radius: 8px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ceebd8'" onmouseout="this.style.backgroundColor='#dbf4e2'">
+            <h3 style="font-size: 26px; color: #ffffff; margin: 30px 0 20px; padding: 10px 15px; text-align: center; background-color: rgba(0,0,0,0); border-radius: 8px;">
                 Recommended Products
-            </h3>
-            
+            </h3>            
             <div style="display: flex; justify-content: center; margin: 30px 0;">
                 <table style="border: 4px solid #2e8b57; border-radius: 15px; border-collapse: separate; border-spacing: 0; width: 90%; box-shadow: 0 6px 12px rgba(0,0,0,0.15); overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif;">
                     <tr style="background-color: #3cb371; color: white;">
                         <th style="padding: 15px 20px; text-align: center; border: 1px solid #2e8b57; border-bottom: 3px solid #2e8b57; font-weight: bold; font-size: 20px;">Product</th>
                         <th style="padding: 15px 20px; text-align: center; border: 1px solid #2e8b57; border-bottom: 3px solid #2e8b57; font-weight: bold; font-size: 20px;">Active Ingredient</th>
                         <th style="padding: 15px 20px; text-align: center; border: 1px solid #2e8b57; border-bottom: 3px solid #2e8b57; font-weight: bold; font-size: 20px;">Use Case</th>
-                        <th style="padding: 15px 20px; text-align: center; border: 1px solid #2e8b57; border-bottom: 3px solid #2e8b57; font-weight: bold; font-size: 20px;">Source</th>
                     </tr>
-                    <tr style="background-color: #f0fff0; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#dfffdf'" onmouseout="this.style.backgroundColor='#f0fff0'">
+                    <tr style="background-color: #32de84;">
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px; font-weight: 500;">Revus Top®</td>
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;">Mandipropamid</td>
                         <td style="padding: 12px 20px; text-align: left; border: 1px solid #2e8b57; font-size: 18px;">Early/late blight prevention</td>
-                        <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;"></td>
                     </tr>
-                    <tr style="background-color: #e6ffe6; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#d1ffd1'" onmouseout="this.style.backgroundColor='#e6ffe6'">
+                    <tr style="background-color: #3cb371; ">
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px; font-weight: 500;">Zineb + Hexaconazole</td>
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;">Zineb (68%)</td>
                         <td style="padding: 12px 20px; text-align: left; border: 1px solid #2e8b57; font-size: 18px;">Most effective field control</td>
-                        <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;"></td>
                     </tr>
-                    <tr style="background-color: #f0fff0; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#dfffdf'" onmouseout="this.style.backgroundColor='#f0fff0'">
+                    <tr style="background-color: #32de84; ">
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px; font-weight: 500;">Copper Hydroxide</td>
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;">Copper</td>
                         <td style="padding: 12px 20px; text-align: left; border: 1px solid #2e8b57; font-size: 18px;">Organic-approved option</td>
-                        <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;"></td>
                     </tr>
-                    <tr style="background-color: #e6ffe6; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#d1ffd1'" onmouseout="this.style.backgroundColor='#e6ffe6'">
+                    <tr style="background-color: #3cb371; ">
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px; font-weight: 500;">Ranman Top®</td>
                         <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;">Cyazofamid</td>
                         <td style="padding: 12px 20px; text-align: left; border: 1px solid #2e8b57; font-size: 18px;">Spore-killing during harvest</td>
-                        <td style="padding: 12px 20px; text-align: center; border: 1px solid #2e8b57; font-size: 18px;"></td>
                     </tr>
                 </table>
             </div>
 
-            <p style="font-size: 20px; text-align: center; margin: 30px 0; padding: 15px; background-color: #daefd9; border-radius: 10px; border-left: 5px solid #2e8b57; font-weight: 500; line-height: 1.7; color: #006400; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            <p style="font-size: 20px; text-align: center; margin: 30px 0; padding: 15px; background-color: rgba(0, 0, 0, 0); border-radius: 10px; border-left: 5px solid #2e8b57; font-weight: 500; line-height: 1.7; color: #ffffff; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                 Act quickly—delay increases tuber infection risk. Focus on removing infected foliage first, then apply fungicides. For severe cases, prioritize saving tubers over foliage.
             </p>
         </div>
     </div>
-</body>
-</html>\n""" +
+</div>\n""" +
                 "---System-Instruction---\n" +
                 full_prompt
             )
