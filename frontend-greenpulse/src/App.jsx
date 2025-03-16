@@ -13,13 +13,15 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 
 axios.defaults.withCredentials = true;
 import LandingPage from "./pages/Landing/LandingPage";
-<<<<<<< HEAD
 import BlogContent from "./pages/Blog/BlogContentPage/BlogContent";
-=======
 import OtpVerification from "./pages/OtpVerification";
 import ContentSection16 from "./pages/Blog/BlogContentPage/BlogContent";
+import MarketPlace from "./pages/MarketPlace/MarketPlace";
+import Cart from "./pages/cart/Cart";
+import PlaceOrder from "./pages/place-order/Place-Order";
+import Footer from "./components/Footer/Footer";
+import AddPhoto from "./pages/addphoto/AddPhoto";
 
->>>>>>> 9e3b058465bdd25637c4e4e6799338e56591fa76
 function App() {
   return (
     <div>
@@ -33,12 +35,17 @@ function App() {
           <Route path="/otp-verification" element={<OtpVerification/>}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blog-list" element={<BlogList />}></Route>
-<<<<<<< HEAD
+
           <Route path="/blog/:id" element={<BlogContent />}></Route>
-=======
+
           <Route path="/dashboard" element={<Dashboard/>}></Route>
           <Route path="./blog-list/BlogContentPage/BlogContent" element={<ContentSection16 />} />
->>>>>>> 9e3b058465bdd25637c4e4e6799338e56591fa76
+
+
+          <Route path='/marketplace' element={<MarketPlace/>}/>
+        <Route path='/add-photo/:name' element={<AddPhoto/>}  />
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/order' element={<PlaceOrder/>}/>
         </Routes>
       </Router>
       </AuthProvider>
