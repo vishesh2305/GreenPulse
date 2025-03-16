@@ -18,17 +18,18 @@ const SignUp = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+
     const userData = {
       name: document.getElementById("name").value,
-      email,
+      email: document.getElementById("email").value, 
       password: document.getElementById("password").value,
     };
   
     try {
-      window.location.href = `${import.meta.env.VITE_SERVER}/auth/google`;
+      const response = await axios.post(`${import.meta.env.VITE_SERVER}/api/sign-up`, userData);
       console.log("Response:", response.data);
-      if(response.data.message==true){
+        if(response.data.message==true){
       navigate("/otp-verification", { state: { email } });}
       else{alert(response.data.message)}
     } catch (error) {
@@ -122,7 +123,7 @@ const SignUp = () => {
           </div>
 
           {/* Sign In Button */}
-          <button className="bg-darkGray text-white font-semibold px-4 py-2 rounded-lg w-full mt-4 hover:shadow-lg transition dark:hover:bg-white dark:hover:text-black  duration-200 ease-linear dark:border dark:border-gray-100">
+          <button className="bg-darkGray text-white font-semibold px-4 py-2 rounded-lg w-full mt-4 hover:shadow-lg transition dark:hover:bg-white dark:hover:text-black  duration-200 ease-linear dark:border dark:border-gray-100" >
             Create Your Account
           </button>
 
