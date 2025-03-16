@@ -9,8 +9,7 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import BlogList from "./pages/Blog/BlogList";
 import LandingPage from "./pages/Landing/LandingPage";
-import ContentSection16 from "./pages/Blog/BlogContentPage/BlogContent";
-
+import BlogContent from "./pages/Blog/BlogContentPage/BlogContent";
 function App() {
   return (
     <div>
@@ -21,7 +20,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/blog-list" element={<BlogList />}></Route>
-          <Route path="./blog-list/BlogContentPage/BlogContent" element={<ContentSection16 />} />
+          <Route path="/blog/:id" element={<BlogContent />}></Route>
         </Routes>
       </Router>
     </div>
