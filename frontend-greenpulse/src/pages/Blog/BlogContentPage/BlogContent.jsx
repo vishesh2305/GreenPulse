@@ -190,7 +190,7 @@ export function BlogContent() {
                 <Typography variant="h6" className="text-gray-400">
                         {post.date}
                     </Typography>
-                <Typography className="font-normal !text-gray-500">
+                <Typography className="font-normal !text-gray-500 text-justify">
                     {post.content}
                 </Typography>
             </div>
